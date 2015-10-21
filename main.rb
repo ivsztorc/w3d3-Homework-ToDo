@@ -56,17 +56,16 @@ get '/items/:id/edit' do
 end
 
 post '/items/:id' do
-  # post '/items' do
-  # item = params['item']
-  # details = params['details']
-  # sql = "insert into items (item, details) values ('#{item}', '#{details}')"
-  # run_sql(sql)
-
-
-  redirect to("/items/#{params[:id]}")
-end
-
+    item = params[:item]
+    details = params[:details]
+    sql = "UPDATE items SET item='#{item}', details='#{details}' WHERE id='#{params[:id]}'"
+    run_sql(sql)
+    redirect to("/items/#{params[:id]}")
+  end
+  
 post '/items/:id/delete' do
+  sql = "delete from items where id ='#{params[:id]}'"
+  run_sql(sql)
 
 
     # sql = "delete(select??) * from items where id = #{params['id'].to_i}"

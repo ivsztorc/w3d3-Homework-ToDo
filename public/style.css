@@ -35,11 +35,22 @@ body {
             text-decoration: none;
             color: white;
             text-align: center;
+            padding-left: 80px;
         }
 
         label {
             color: white;
         }
+
+        dt {
+            padding-left: 80px;
+        }
+
+        dd {
+            padding-left: 80px;
+        }
+
+
 
         #all {
             /*margin-top:-75px;*/
